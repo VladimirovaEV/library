@@ -81,9 +81,11 @@ export const scss = () => gulp
 .pipe(gulpIf(!dev, gcmq()))
 .pipe(gulpIf(!dev, gulp.dest(path.dist.css)))
 .pipe(gulpIf(!dev, cleanCSS({
-    specialComments: 0,
+  2: {
+      specialComments: 0,
+    }
 })))
-.pipe(rename({suffix: 'min'}))
+.pipe(rename({suffix: '.min'}))
 .pipe(gulpIf(dev, sourcemaps.write()))
 .pipe(gulp.dest(path.dist.css))
 .pipe(browserSync.stream());
@@ -170,7 +172,7 @@ const image = () => gulp
 
 export const copy = () => gulp
   .src(path.src.assets, {
-    base: path.dist.base,
+    base: path.src.base,
   })
   .pipe(gulp.dest(path.dist.base))
   .pipe(browserSync.stream({
