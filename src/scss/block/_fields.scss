@@ -43,7 +43,7 @@
     @include laptop {
       top: calc(100% + 20px);
     }
-    &__active {
+    &_active {
       display: block;
     }
     &-sort {

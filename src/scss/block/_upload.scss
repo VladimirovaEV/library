@@ -1,0 +1,25 @@
+.upload  {
+  max-width: 222px;
+  margin: 0 auto 15px;
+  @include laptop {
+    margin-bottom: 52px;
+  }
+  @include desktop {
+    margin-bottom: 114px;
+  }
+  &__label {
+    display: block;
+    width: 222px;
+    height: 290px;
+    background-image: url('../../img/upload.jpg');
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  &__preview {
+    display: none;
+  }
+  &__file {
+    display: none;
+  }
+}
